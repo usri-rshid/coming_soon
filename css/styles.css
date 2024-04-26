@@ -3,120 +3,165 @@
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 60, 67);
+}
+
+.bg {
+    width: 100vh;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -100;
 }
 
 .container {
-
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/background.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: 0 8%;
-
+    color: #d1d1d1;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.container .logo {
-    display: flex;
-    width: auto;
-    padding: 20px 20px;
-    cursor: pointer;
-    font-size: 5rem;
-    color: #000000;
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.container .logo img {
-
-    height: 6rem;
-    width: 6rem;
-
-
-    cursor: pointer;
-
-}
-
-.content {
-    padding-top: 10rem;
-    top: 50%;
-    left: 10%;
-    position: absolute;
-    transform: translateY(-50%);
-    color: #fff;
-}
-
-.content h1 {
-    font-size: 10rem;
+h3 {
+    font-size: 1.5rem;
     font-weight: 600;
+    letter-spacing: .25rem;
+    margin: 1rem;
+    color: aqua
 }
 
-.content p {
-    font-size: 2rem;
-    font-weight: 300;
-}
 
-.content h1 span {
-    color: #ff0000;
-}
-
-.content button {
-    width: auto;
-    height: auto;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 0.5rem 0.75rem;
-
-}
-
-.content button img {
-
-    width: 7rem;
-    height: auto;
-    cursor: wait;
-
-}
 
 .launch-time {
     display: flex;
+    text-align: center;
+
 }
 
 .launch-time div {
     flex-basis: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
 .launch-time div p {
     font-size: 3rem;
     margin-bottom: -0.1rem;
+    color: #E3FEF7;
+
 }
 
 .micro {
     width: 10rem;
     position: absolute;
-    right: 2rem;
+    right: 1rem;
     bottom: 0;
+    box-shadow: #fff;
     animation: micro 6s linear infinite;
+
+
 }
 
 @keyframes micro {
     0% {
+        left: 60%;
         bottom: 0;
-        opacity: 0.5;
+        opacity: 0.7;
+        filter: invert(20%);
+    }
+
+    50% {
+        left: 50%;
+        bottom: 50%;
+        opacity: 0.7;
+        filter: invert(60%);
+
     }
 
     100% {
+        left: 10%;
         bottom: 110%;
-        opacity: 0.5;
+        opacity: 0.8;
+        filter: invert(100%);
+
     }
 }
 
-@media (390px) {
+.progress-bar {
+    width: 20rem;
+    height: 1rem;
+    background-color: rgb(227, 254, 247);
+    margin: auto;
+    margin: 5rem auto;
+    opacity: 0.8;
+    position: relative;
 
-    * {
-        display: inline;
+}
 
+.progress-bar::before {
+    content: "0%";
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    bottom: -1rem;
+}
+
+.progress-bar::after {
+    content: "100%";
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+    bottom: -1rem;
+}
+
+.progress-bar span {
+    display: block;
+    width: 50%;
+    height: 1rem;
+    background-color: rgb(0, 60, 67);
+    animation: fill 1s ease-in 1;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
     }
 
-    .container .logo {
-        font-size: 2rem;
+    to {
+        width: 50%;
     }
+}
+
+.sm a {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+
+    color: #fff;
+    font-size: 5rem;
+    /* border-radius: 50%; */
+
+    margin: 0 1rem;
+    opacity: 0.7;
+    transition: 0.3 linear;
+}
+
+.sm a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    color: aqua;
+
 }
