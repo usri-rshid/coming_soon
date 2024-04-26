@@ -49,6 +49,11 @@
     font-weight: 600;
 }
 
+.content p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
 .content h1 span {
     color: #ff0000;
 }
@@ -67,6 +72,7 @@
 
     width: 7rem;
     height: auto;
+    cursor: wait;
 
 }
 
@@ -100,5 +106,17 @@
     100% {
         bottom: 110%;
         opacity: 0.5;
+    }
+}
+
+@media (390px) {
+
+    * {
+        display: inline;
+
+    }
+
+    .container .logo {
+        font-size: 2rem;
     }
 }
