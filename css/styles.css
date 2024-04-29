@@ -11,6 +11,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background-color: rgb(0, 60, 67);
 }
 
@@ -189,4 +190,32 @@ h3 {
 .btn:hover {
     background: #97E7E1;
     text-decoration: none;
+}
+
+.clock {
+    width: auto;
+    padding: 2rem;
+    background-color: rgba(26, 92, 0, 0.452);
+    color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.time {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #ddd;
+    line-height: 1.2;
+}
+
+.date {
+    font-size: 2rem;
+    opacity: 0.8;
+    line-height: 1.5;
 }
